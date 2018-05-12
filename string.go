@@ -17,7 +17,7 @@ func NewString() *String {
 
 // NewStringWithStrings creates a sorted slice of string using the given slice of string.
 func NewStringWithStrings(a []string) *String {
-	return &string{duplicateStrings(a)}
+	return &String{duplicateStrings(a)}
 }
 
 // Insert inserts a value x into the sorted slice of string. If uniq is true and the sorted slice already has x, then Insert dosen't insert x.
