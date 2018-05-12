@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-// Strings is a sorted slice of string.
+// String is a sorted slice of string.
 type String struct {
 	values []string
 }
@@ -20,7 +20,7 @@ func NewStringWithStrings(a []string) *String {
 	return &string{duplicateStrings(a)}
 }
 
-// Insert inserts a value x into the sorted slice of string. If uniq is true and Strings already has x, then Insert dosen't insert x.
+// Insert inserts a value x into the sorted slice of string. If uniq is true and the sorted slice already has x, then Insert dosen't insert x.
 func (s *String) Insert(x string, uniq bool) {
 	t := s.values
 	index := sort.SearchStrings(t, x)
@@ -66,7 +66,7 @@ func (s *String) Uniq() {
 	s.values = b
 }
 
-// String creates string made from Strings' values.
+// String creates string made from sorted slice's values.
 func (s String) String() string {
 	return fmt.Sprint(s.values)
 }
