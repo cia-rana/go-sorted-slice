@@ -71,6 +71,16 @@ func (s String) String() string {
 	return fmt.Sprint(s.values)
 }
 
+// At returns i th value.
+func (s String) At(i int) string {
+	return s.values[i]
+}
+
+// Len return length of values.
+func (s String) Len() int {
+	return len(s.values)
+}
+
 func duplicateStrings(a []string) []string {
 	b := make([]string, len(a), len(a))
 	for i, v := range a {
